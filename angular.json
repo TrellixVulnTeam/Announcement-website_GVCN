@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "hometask6": {
+    "nerdysoft": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:class": {
@@ -41,7 +41,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "docs",
+            "outputPath": "dist/nerdysoft",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -93,10 +93,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "hometask6:build:production"
+              "browserTarget": "nerdysoft:build:production"
             },
             "development": {
-              "browserTarget": "hometask6:build:development"
+              "browserTarget": "nerdysoft:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -104,7 +104,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "hometask6:build"
+            "browserTarget": "nerdysoft:build"
           }
         },
         "test": {
@@ -128,5 +128,5 @@
       }
     }
   },
-  "defaultProject": "hometask6"
+  "defaultProject": "nerdysoft"
 }
