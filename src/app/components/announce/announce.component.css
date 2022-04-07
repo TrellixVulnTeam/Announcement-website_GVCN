@@ -1,0 +1,6 @@
+.announce {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    overflow: auto;
+}

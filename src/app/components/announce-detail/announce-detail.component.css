@@ -1,0 +1,21 @@
+.information {
+    margin-top: 0.8rem;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1.4rem;
+ }
+
+ .created {
+    margin-top: -0.8rem;
+    padding: 1rem;
+    font-size: 12px;
+ }
+
+ .details {
+    padding: 1rem;
+    font-size: 1.2rem;
+ }
+
+ button {
+     margin-left: 1rem;
+ }

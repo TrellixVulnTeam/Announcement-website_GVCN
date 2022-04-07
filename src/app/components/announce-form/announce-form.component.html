@@ -1,0 +1,5 @@
+<mat-form-field appearance="outline">
+    <mat-label>Item name</mat-label>
+    <input matInput [formControl]="title" required>
+    <mat-error *ngIf="title.invalid">{{getErrorMessage()}}</mat-error>
+</mat-form-field>

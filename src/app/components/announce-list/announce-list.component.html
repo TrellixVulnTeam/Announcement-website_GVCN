@@ -1,0 +1,13 @@
+<mat-expansion-panel fxLayout="column" fxLayoutAlign="space-between stretch" (opened)="panelOpenState = true" (closed)="panelOpenState = false" expanded>
+
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Announcement List
+     </mat-panel-title>
+  </mat-expansion-panel-header>
+
+  <mat-list role="list">
+    <app-announce *ngFor="let announce of announces" [announce]="announce"></app-announce>
+  </mat-list>
+
+</mat-expansion-panel>

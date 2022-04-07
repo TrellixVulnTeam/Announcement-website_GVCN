@@ -1,0 +1,25 @@
+<app-date></app-date>
+<div fxLayout="row" fxLayoutAlign="end center" class="icon">
+  <mat-icon *ngIf="showInput" (click)="toggleIcon()" class="icon-display">{{showIcon ? 'remove' : 'add_circle'}}</mat-icon>
+</div> 
+
+<div *ngIf="showInput && showIcon" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px" class="input" @fadeSlideIn>
+  <app-announce-form #announceForm fxFlex=80 (announceChange)="onAddannounceChange($event)"></app-announce-form>
+  <button fxFlex=10 mat-raised-button color="primary" (click)="addannounce()">Add</button>
+  <button fxFlex=10 (click)="toggleIcon()" mat-stroked-button class="cancelButton">Cancel</button>
+</div>
+
+<div fxLayout="row" fxLayoutAlign="end end" fxLayoutGap="10px" class="input" @fadeSlideIn>
+  <mat-form-field appearance="legacy">
+    <mat-label>Search</mat-label>
+    <input matInput [formControl]="search">
+  </mat-form-field>
+</div>
+
+<div *ngIf="showInput" fxLayout="column" fxLayoutAlign="center stretch">
+  <ng-container *ngIf="allannounces.length > 0">
+    <div fxLayout="column" fxLayoutAlign="center center" fxFlex @fadeSlideIn>
+      <app-announce-list [announces]="allannounces" fxFlexFill></app-announce-list>
+    </div>
+  </ng-container>
+</div>

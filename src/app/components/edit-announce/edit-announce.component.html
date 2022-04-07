@@ -1,0 +1,24 @@
+<app-date></app-date>
+
+<section *ngIf="announce" @fadeSlideIn>
+  <form
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    fxLayoutGap="40px"
+    [formGroup]="editForm"
+    (ngSubmit)="onSubmit()">
+    <mat-form-field class="edit">
+      <input
+        type="text"
+        matInput
+        formControlName="title">
+      <mat-hint>Please enter a valid title.</mat-hint>
+      <mat-error>Invalid or missing title.</mat-error>
+    </mat-form-field>
+    <mat-form-field class="edit" appearance="fill">
+      <mat-label>Add description</mat-label>
+      <textarea matInput formControlName="details"></textarea>
+    </mat-form-field>
+    <button type="submit" mat-raised-button color="primary" [disabled]="editForm.invalid">Save</button>
+  </form>
+</section>

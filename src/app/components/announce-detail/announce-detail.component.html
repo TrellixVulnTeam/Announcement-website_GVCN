@@ -1,0 +1,23 @@
+<app-date></app-date>
+
+<div *ngIf="announce" fxLayout="column" fxLayoutAlign="start start" @fadeSlideIn>
+    <span class="information">Title: {{announce.title}}</span>
+    <span class="created">Added at: {{announce.created | date: 'medium' }}</span>
+    <span *ngIf="announce.details; else elseBlock" class="details">Description: {{announce.details}}</span>
+    <ng-template #elseBlock>
+        <label class="details">This announcement doesn't have a description yet. But you can add it by pressing the 'Edit' button</label> 
+    </ng-template>
+    <ng-container *ngIf="topSimilar.length !== 0; else elseBlockAn">
+       <span class="information">Top Similar Announcement:</span>  
+        <div *ngFor="let simAnnonce of topSimilar" class="details">
+         <i>Title:</i>   {{simAnnonce.title}} 
+         <br />
+         <i>Description:</i>   {{simAnnonce.details}}
+        </div>
+    </ng-container>
+
+    <ng-template #elseBlockAn>
+        <label class="details">This announcement doesn't have similar announcements</label> 
+    </ng-template>
+    <button fxFlex=10 mat-raised-button color="primary" (click)="editannounce()">Edit</button>
+</div>

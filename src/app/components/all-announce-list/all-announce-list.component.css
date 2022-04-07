@@ -1,0 +1,25 @@
+.mat-raised-button {
+    width: 18rem;
+}
+
+.icon-display {
+    transform: scale(1.5);
+ }
+
+ .information {
+    padding: 1rem;
+ }
+
+ .input {
+    padding: 1rem;
+}
+
+.cancelButton {
+    padding: 0;
+}
+
+.icon {
+    margin-right: 1.6rem;
+    margin-top: -2.8rem;
+    margin-bottom: 0.5rem;
+}
