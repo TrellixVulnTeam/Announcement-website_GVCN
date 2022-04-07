@@ -65,7 +65,7 @@ export class announceListService {
 
     existingEntries.forEach((elem:announceItem) => {
       let currentTiitleWords = elem.title.replace(/[^a-zA-Z ]/g, "").split(/[!,?,. ]/);
-      let currentDetailsWords = elem.title.replace(/[^a-zA-Z ]/g, "").split(/[!,?,. ]/);
+      let currentDetailsWords = elem.details.replace(/[^a-zA-Z ]/g, "").split(/[!,?,. ]/);
       
       if (elem.id ==item.id) {
         return;

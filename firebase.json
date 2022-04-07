@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/nerdysoft",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
